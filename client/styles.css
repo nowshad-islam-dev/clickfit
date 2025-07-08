@@ -98,3 +98,40 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+/* features section */
+.features {
+  background-color: #2a5298;
+}
+.feature-title,
+.title {
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-decoration: 4px underline solid #ffc107;
+}
+
+.row .card {
+  border: 2px solid #ffc107;
+  background-color: #343a40;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.row .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+/* upload section */
+.upload-box {
+  background-color: #f9f9f9;
+  transition: border 0.3s;
+}
+
+.upload-box.dragover {
+  border-color: #17a2b8;
+  background-color: #e9f7fb;
+}
