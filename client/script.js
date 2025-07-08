@@ -23,6 +23,24 @@ $(document).ready(function () {
 
   $(window).on("scroll", revealOnScroll);
 
+  // Fetch fact on page load
+  function fetchFact() {
+    $.ajax({
+      url: "http://numbersapi.com/1/30/date?json",
+      method: "GET",
+      success: function (data) {
+        $("#fact-container").text(data.year);
+        $("#fact-log").text(data.text);
+      },
+      error: function () {
+        $("#fact-container").text("Could not load fact. Try again later.");
+      },
+    });
+  }
+
+  fetchFact(); // Initial load
+  $("#get-fact-btn").on("click", fetchFact); // Fetch on button click
+
   // Handle image upload
   const uploadBox = $("#upload-box");
   const uploadInput = $("#image-upload");
